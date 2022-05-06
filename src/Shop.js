@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function App() {
+function Shop() {
   return (
     <div>
-      <h1>hello from app</h1>
+      <h1>hello from shop</h1>
       <nav>
         <Link to="/">Home</Link>
         <Link to="/contacts">Contacts</Link>
@@ -14,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default Shop;
