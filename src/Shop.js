@@ -16,49 +16,26 @@ function Shop() {
 
   useEffect(() => {
     if (products.length > 0) {
-      console.log("Ready!!");
-      setLoadingPage((prevState) => !prevState);
+      setLoadingPage(false);
     }
-    console.log("almost ready");
   }, [products]);
 
-  // const load = function Loading() {
-  //   return (
-  //     <div>
-  //       <h2>Loading in ReactJs - GeeksforGeeks</h2>
-  //       <ReactLoading type="balls" color="#0000FF" height={100} width={50} />
-  //       <ReactLoading type="bars" color="#0000FF" height={100} width={50} />
-  //       <ReactLoading type="bubbles" color="#0000FF" height={100} width={50} />
-  //       <ReactLoading type="cubes" color="#0000FF" height={100} width={50} />
-  //       <ReactLoading type="cylon" color="#0000FF" height={100} width={50} />
-  //       <ReactLoading type="spin" color="#0000FF" height={100} width={50} />
-  //       <ReactLoading type="spokes" color="#0000FF" height={100} width={50} />
-  //       <ReactLoading
-  //         type="spinningBubbles"
-  //         color="#0000FF"
-  //         height={100}
-  //         width={50}
-  //       />
-  //     </div>
-  //   );
-  // };
-
-  // const productsDom = products.map((product) => {
-  //   return (
-  //     <ProductCard
-  //       key={product.id}
-  //       id={product.id}
-  //       description={product.description}
-  //       image={product.image}
-  //       price={product.price}
-  //       title={product.title}
-  //     />
-  //   );
-  // });
+  const productsDom = products.map((product) => {
+    return (
+      <ProductCard
+        key={product.id}
+        id={product.id}
+        description={product.description}
+        image={product.image}
+        price={product.price}
+        title={product.title}
+      />
+    );
+  });
 
   return (
     <div>
-      <h1>hello from shop</h1>
+      <h1 data-testid="shopTitle">hello from shop</h1>
       <nav>
         <Link to="/">Home</Link>
         <Link to="/contacts">Contacts</Link>
@@ -66,10 +43,11 @@ function Shop() {
       </nav>
       {loadingPage && (
         <div>
-          <h2>Loading in ReactJs - GeeksforGeeks</h2>
+          <h2 data-testid="loadT">Loading products</h2>
           <ReactLoading type="bars" color="#0000FF" height={100} width={50} />
         </div>
       )}
+      {!loadingPage && <div id="prodsDiv">{productsDom}</div>}
     </div>
   );
 }

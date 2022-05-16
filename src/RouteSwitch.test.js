@@ -16,15 +16,19 @@ describe("nav bar switches pages", () => {
     render(<RouteSwitch />);
     const contacts = screen.getByRole("link", { name: "Contacts" });
     userEvent.click(contacts);
-    expect(screen.getByRole("heading").textContent).toMatch(/hello from contacts/i);
+    expect(screen.getByRole("heading").textContent).toMatch(
+      /hello from contacts/i
+    );
   });
 });
 
 describe("nav bar switches pages", () => {
-    it("renders shop after click", () => {
-      render(<RouteSwitch />);
-      const shop = screen.getByRole("link", { name: "Products" });
-      userEvent.click(shop);
-      expect(screen.getByRole("heading").textContent).toMatch(/hello from shop/i);
-    });
+  it("renders shop after click", () => {
+    render(<RouteSwitch />);
+    const shop = screen.getByRole("link", { name: "Products" });
+    userEvent.click(shop);
+    expect(screen.getByTestId("shopTitle").textContent).toMatch(
+      /hello from shop/i
+    );
   });
+});
