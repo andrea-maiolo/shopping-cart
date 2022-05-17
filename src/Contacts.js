@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Cart from "./components/Cart";
 
 function Contacts() {
   return (
@@ -9,6 +10,7 @@ function Contacts() {
         <Link to="/">Home</Link>
         <Link to="/contacts">Contacts</Link>
         <Link to="/shop">Products</Link>
+        {<Cart />}
       </nav>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ProductCard from "./components/ProductCard";
 import ReactLoading from "react-loading";
+import Cart from "./components/Cart";
 
 function Shop() {
   const [products, setProducts] = useState([]);
@@ -33,6 +34,11 @@ function Shop() {
     );
   });
 
+  //test to see if i can pass products as props
+  // const syncCart = products.map((product) => {
+  //   return <Cart key={product.id} product={product} />;
+  // });
+
   return (
     <div>
       <h1 data-testid="shopTitle">hello from shop</h1>
@@ -40,6 +46,9 @@ function Shop() {
         <Link to="/">Home</Link>
         <Link to="/contacts">Contacts</Link>
         <Link to="/shop">Products</Link>
+        {<Cart />}
+
+        {/* {syncCart} */}
       </nav>
       {loadingPage && (
         <div>

@@ -20,3 +20,12 @@ describe("loading page should work accordingly to products readyness", () => {
     expect(screen.findByTestId("prods")).toBeTruthy();
   });
 });
+
+describe("products are displayed correctly", () => {
+  it("should render products as cards", () => {
+    render(<RouteSwitch />);
+    const shop = screen.getByRole("link", { name: "Products" });
+    userEvent.click(shop);
+    expect(screen.findByText("€", { exact: false })).toBeTruthy();
+  });
+});
