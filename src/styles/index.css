@@ -12,6 +12,45 @@ code {
     monospace;
 }
 
+/* header component*/
+/* footer component */
+.footerComp {
+  display: flex;
+  align-items: center;
+}
+
+/* Our story */
+.homePage {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.storySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerMain {
+  font-weight: 700;
+}
+
+.storytelling {
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.firstLorem {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.imageFrontPage {
+  max-width: 80vw;
+}
+
 #prodsDiv {
   display: flex;
   flex-direction: column;

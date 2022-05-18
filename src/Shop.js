@@ -43,12 +43,9 @@ function Shop() {
     <div>
       <h1 data-testid="shopTitle">hello from shop</h1>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/contacts">Contacts</Link>
+        <Link to="/">Our Story</Link>
+        <Link to="/contacts">Contact Us</Link>
         <Link to="/shop">Products</Link>
-        {<Cart />}
-
-        {/* {syncCart} */}
       </nav>
       {loadingPage && (
         <div>

@@ -1,28 +1,39 @@
-import React, { useState } from "react";
-import Shop from "../Shop";
+// import React, { useState } from "react";
+// import Shop from "../Shop";
 
-function Cart(props) {
-  const [cart, setCart] = useState([]);
-  const [cartVisibility, setCartVisibility] = useState(false);
+// function Cart(props) {
+//   const [cart, setCart] = useState([]);
+//   const [cartVisibility, setCartVisibility] = useState(false);
 
-  function handleCartVisibilityFunction() {
-    setCartVisibility((prevState) => !prevState);
-    console.log(cartVisibility);
-  }
+//   function handleCartVisibilityFunction() {
+//     setCartVisibility((prevState) => !prevState);
+//     console.log(cartVisibility);
+//   }
 
-  return (
-    <div>
-      <button onClick={handleCartVisibilityFunction}>click to show cart</button>
-    </div>
-  );
-  {
-    cartVisibility && (
-      <div>
-        <p>image of cart</p>
-        <p>checkout link to demo page</p>
-      </div>
-    );
-  }
-}
+//   return (
+//     <div>
+//       <button onClick={handleCartVisibilityFunction}>click to show cart</button>
+//     </div>
+//   );
+//   {
+//     cartVisibility && (
+//       <div>
+//         <p>image of cart</p>
+//         <p>checkout link to demo page</p>
+//       </div>
+//     );
+//   }
+// }
 
-export default Cart;
+// export default Cart;
+
+// {
+//   cartClicked ? (
+//     <Checkout
+//       cartLength={cartLength}
+//       cart={cart}
+//       setCartClicked={setCartClicked}
+//       emptyCart={emptyCart}
+//     />
+//   ) : null;
+// }
