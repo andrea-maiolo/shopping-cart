@@ -44,8 +44,10 @@ function Shop() {
     <div className="shopPage">
       <Header />
       {loadingPage && (
-        <div>
-          <h2 data-testid="loadT">Loading products</h2>
+        <div className="loadingPage">
+          <h2 data-testid="loadT" className="loadT">
+            Loading products
+          </h2>
           <ReactLoading type="bars" color="#0000FF" height={100} width={50} />
         </div>
       )}

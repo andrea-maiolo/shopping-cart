@@ -179,6 +179,18 @@ code {
   margin: 1rem;
 }
 
+.loadingPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loadT {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+}
+
 .prodsDiv {
   display: grid;
 }
