@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(228, 224, 224);
 }
 
 code {
@@ -13,10 +14,53 @@ code {
 }
 
 /* header component*/
+.headerMain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: #025496 0.2rem solid;
+}
+
+.shopTitle {
+  color: #025496;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  border: 3px #025496 dotted;
+}
+
+.navBarTop > a {
+  margin: 1.2rem;
+  text-decoration: none;
+  color: #025496;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 /* footer component */
 .footerComp {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  margin-top: 1.2rem;
+  border-top: #025496 0.2rem solid;
+  justify-content: center;
+}
+
+.navBarBot {
+  display: flex;
+  flex-direction: row;
+}
+
+.navBarBot > a {
+  margin: 1.2rem;
+  text-decoration: none;
+  color: #025496;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.navBarBot > img {
+  width: 1.5rem;
+  margin: 0 1.2rem;
 }
 
 /* Our story */
@@ -33,12 +77,14 @@ code {
   justify-content: center;
 }
 
-.headerMain {
+.secondHeader {
   font-weight: 700;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .storytelling {
   font-family: "Arial Narrow", Arial, sans-serif;
+  font-size: large;
 }
 
 .firstLorem {
@@ -51,9 +97,90 @@ code {
   max-width: 80vw;
 }
 
-#prodsDiv {
+/* contact us page */
+
+.contactUsPage {
   display: flex;
   flex-direction: column;
+  margin: 1rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 65vh;
+}
+
+.secondHeadCont {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+}
+
+.pOfCont {
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-size: large;
+}
+
+.myForm {
+  display: grid;
+  grid-template-areas:
+    "firstName lastName"
+    "email subject"
+    "message message"
+    "buttonSub buttonSub";
+  gap: 0.8rem 0.5rem;
+}
+
+#firstNameInput {
+  grid-area: firstName;
+  height: 1.2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#lastNameInput {
+  grid-area: lastName;
+  height: 1.2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#emailInput {
+  grid-area: email;
+  height: 1.2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#subjectInput {
+  grid-area: subject;
+  height: 1.2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#messageInput {
+  grid-area: message;
+  height: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.buttonSub {
+  grid-area: buttonSub;
+  background-color: #025496;
+  color: #fff;
+  border-radius: 7px;
+  height: 1.8rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* shop page */
+
+.shopPage {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.prodsDiv {
+  display: grid;
 }
 
 .prodPrice {

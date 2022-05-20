@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import ProductCard from "./components/ProductCard";
 import ReactLoading from "react-loading";
 import Cart from "./components/Cart";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function Shop() {
   const [products, setProducts] = useState([]);
@@ -40,20 +41,16 @@ function Shop() {
   // });
 
   return (
-    <div>
-      <h1 data-testid="shopTitle">hello from shop</h1>
-      <nav>
-        <Link to="/">Our Story</Link>
-        <Link to="/contacts">Contact Us</Link>
-        <Link to="/shop">Products</Link>
-      </nav>
+    <div className="shopPage">
+      <Header />
       {loadingPage && (
         <div>
           <h2 data-testid="loadT">Loading products</h2>
           <ReactLoading type="bars" color="#0000FF" height={100} width={50} />
         </div>
       )}
-      {!loadingPage && <div id="prodsDiv">{productsDom}</div>}
+      {!loadingPage && <div calssName="prodsDiv">{productsDom}</div>}
+      <Footer />
     </div>
   );
 }

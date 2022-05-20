@@ -6,21 +6,54 @@ import Footer from "./components/Footer";
 function Contacts() {
   function handleForm(e) {
     e.preventDefault();
+    alert("Thanks for your message!");
   }
   return (
     <div className="contactUsPage">
       <Header />
       <div className="contactForm">
-        <form>
-          <label htmlFor="firstName">First Name</label>
-          <input name="firstName" id="firstNameInput" type="text"></input>
-          <label htmlFor="lastName">Last Name</label>
-          <input name="lastName" id="lastNameInput" type="text"></input>
-          <label htmlFor="email">Email</label>
-          <input name="email" id="emailInput" type="email"></input>
-          <label htmlFor="message">Message</label>
-          <input name="messageName" id="messageInput" type="textarea"></input>
-          <button onClick={handleForm}>Send</button>
+        <h2 className="secondHeadCont">Contact Us</h2>
+        <p className="pOfCont">
+          Say Hello, send us your thoughts about our products or share you ideas
+          with our Team!
+        </p>
+        <form className="myForm">
+          <input
+            name="firstName"
+            id="firstNameInput"
+            type="text"
+            maxLength={14}
+            placeholder="First Name"
+          ></input>
+          <input
+            name="lastName"
+            id="lastNameInput"
+            type="text"
+            maxLength={14}
+            placeholder="Last Name"
+          ></input>
+          <input
+            name="email"
+            id="emailInput"
+            type="email"
+            placeholder="Email"
+          ></input>
+          <input
+            placeholder="Subject"
+            name="subject"
+            id="subjectInput"
+            type="text"
+          ></input>
+          <textarea
+            placeholder="Message"
+            name="message"
+            id="messageInput"
+            type="textarea"
+            maxLength={140}
+          ></textarea>
+          <button className="buttonSub" onClick={handleForm}>
+            Send
+          </button>
         </form>
       </div>
       <Footer />

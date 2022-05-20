@@ -8,7 +8,7 @@ function App() {
     <div className="homePage">
       <Header />
       <main className="storySection">
-        <h2 className="headerMain">About us</h2>
+        <h2 className="secondHeader">About us</h2>
         <p className="storytelling">
           This section is about storytelling, because as great marketing teach
           us, nothing sells like a good story!
@@ -35,9 +35,10 @@ function App() {
         <img
           className="imageFrontPage"
           src="https://www.thedigitalbridges.com/wp-content/uploads/2016/09/ssd-drive-advantages-over-hdd-drive.jpg"
+          alt="SDD picture"
         ></img>
         <p className="storytelling">
-          like every shop that you can respect i am going to tell you about our
+          Like every shop that you can respect i am going to tell you about our
           superior quality
         </p>
         <div className="firstLorem">
@@ -62,6 +63,7 @@ function App() {
         <img
           className="imageFrontPage"
           src="https://images.idgesg.net/images/article/2017/06/intel_ssd_5_4-100727490-large.jpg"
+          alt="SDD picture"
         />
       </main>
       <Footer />
