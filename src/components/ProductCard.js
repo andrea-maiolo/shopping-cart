@@ -1,7 +1,7 @@
 import React from "react";
 
 const ProductCard = function (props) {
-  const [quantity, setQuantity] = React.useState(0);
+  const [quantity, setQuantity] = React.useState(1);
 
   function handleSub() {
     if (quantity === 0) {
@@ -15,7 +15,8 @@ const ProductCard = function (props) {
   }
 
   function addToCart(e) {
-    console.log(e.target);
+    console.log(e.target.parentElement);
+    console.log(quantity);
   }
 
   return (
