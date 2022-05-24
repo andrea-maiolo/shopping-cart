@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="homePage">
       <Header />
+      <Cart />
       <main className="storySection">
         <h2 className="secondHeader">About us</h2>
         <p className="storytelling">

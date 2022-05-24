@@ -35,14 +35,10 @@ function Shop() {
     );
   });
 
-  //test to see if i can pass products as props
-  // const syncCart = products.map((product) => {
-  //   return <Cart key={product.id} product={product} />;
-  // });
-
   return (
     <div className="shopPage">
       <Header />
+      <Cart />
       {loadingPage && (
         <div className="loadingPage">
           <h2 data-testid="loadT" className="loadT">
