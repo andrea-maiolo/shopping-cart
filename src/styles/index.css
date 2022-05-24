@@ -193,19 +193,41 @@ code {
 
 .prodsDiv {
   display: grid;
+  grid-template-areas:
+    "shopTheLatest shopTheLatest"
+    "email subject"
+    "message message"
+    "buttonSub buttonSub";
+  gap: 0.8rem 0.5rem;
+}
+
+.shopTheLatest {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  grid-area: shopTheLatest;
+}
+
+/* single product entries */
+
+.singleProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prodImages {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.prodTitle {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0.2rem;
 }
 
 .prodPrice {
-  font-size: 1rem;
-}
-.prodImages {
-  width: 100px;
-  height: 150px;
-}
-.prodTitle {
-  font-size: 16px;
-  font-weight: bold;
-}
-.prodDescription {
-  font-size: 14px;
+  font-size: 1.2rem;
+  margin: 0.2rem;
+  color: #4b9ee0;
 }

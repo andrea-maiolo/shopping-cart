@@ -51,7 +51,12 @@ function Shop() {
           <ReactLoading type="bars" color="#0000FF" height={100} width={50} />
         </div>
       )}
-      {!loadingPage && <div calssName="prodsDiv">{productsDom}</div>}
+      {!loadingPage && (
+        <div className="prodsDiv">
+          <h2 className="shopTheLatest">Shop the latest</h2>
+          {productsDom}
+        </div>
+      )}
       <Footer />
     </div>
   );
