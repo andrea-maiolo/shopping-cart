@@ -31,6 +31,7 @@ function Shop() {
         image={product.image}
         price={product.price}
         title={product.title}
+        allProd={products}
       />
     );
   });

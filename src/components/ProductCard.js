@@ -15,7 +15,14 @@ const ProductCard = function (props) {
   }
 
   function addToCart(e) {
-    console.log(e.target.parentElement);
+    const referenceDiv = Number(e.target.parentElement.id);
+    const currentProd = props.allProd.filter((e) => {
+      if (e.id === referenceDiv) {
+        console.log(e);
+        console.log(e.price * quantity);
+      }
+    });
+
     console.log(quantity);
   }
 
