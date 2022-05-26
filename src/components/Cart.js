@@ -1,11 +1,9 @@
 import React from "react";
 
-function Cart() {
-  const [cart, setCart] = React.useState([]);
-
+function Cart(props) {
   function handleClick() {
     console.log("i have been clicked");
-    console.log(cart);
+    console.log(props.cart);
   }
   return (
     <button className="cartButton" onClick={handleClick}>

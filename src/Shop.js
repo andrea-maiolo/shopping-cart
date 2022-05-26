@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 
 function Shop() {
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = React.useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/category/electronics?sort=asce")
@@ -32,6 +33,8 @@ function Shop() {
         price={product.price}
         title={product.title}
         allProd={products}
+        cart={cart}
+        setCart={setCart}
       />
     );
   });
@@ -39,7 +42,7 @@ function Shop() {
   return (
     <div className="shopPage">
       <Header />
-      <Cart />
+      <Cart cart={cart} setCart={setCart} />
       {loadingPage && (
         <div className="loadingPage">
           <h2 data-testid="loadT" className="loadT">

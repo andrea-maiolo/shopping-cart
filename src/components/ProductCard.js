@@ -12,18 +12,19 @@ const ProductCard = function (props) {
 
   function handlePlus() {
     setQuantity((prevState) => prevState + 1);
+    console.log(props.cart);
   }
+  console.log(props.cart);
 
   function addToCart(e) {
     const referenceDiv = Number(e.target.parentElement.id);
     const currentProd = props.allProd.filter((e) => {
       if (e.id === referenceDiv) {
         console.log(e);
-        console.log(e.price * quantity);
+        // console.log(e.price * quantity);
+        props.setCart((prevCart) => prevCart.push(e.price));
       }
     });
-
-    console.log(quantity);
   }
 
   return (
