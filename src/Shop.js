@@ -7,13 +7,28 @@ import Footer from "./components/Footer";
 
 function Shop() {
   const [products, setProducts] = useState([]);
+  const [tempProducts, setTempProducts] = useState([]);
   const [cart, setCart] = React.useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/category/electronics?sort=asce")
       .then((res) => res.json())
-      .then((json) => setProducts(json));
+      .then((json) => setTempProducts(json));
   }, [0]);
+
+  React.useEffect(() => {
+    console.log(cart);
+  }, [cart]);
+
+  useEffect(() => {
+    let newProducts = tempProducts.map((obj) => ({
+      id: obj.id,
+      image: obj.image,
+      price: obj.price,
+      title: obj.title,
+    }));
+    setProducts(newProducts);
+  }, [tempProducts]);
 
   const [loadingPage, setLoadingPage] = useState(true);
 
@@ -28,7 +43,6 @@ function Shop() {
       <ProductCard
         key={product.id}
         id={product.id}
-        description={product.description}
         image={product.image}
         price={product.price}
         title={product.title}

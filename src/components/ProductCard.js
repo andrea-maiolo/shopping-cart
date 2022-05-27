@@ -16,16 +16,19 @@ const ProductCard = function (props) {
 
   function addToCart(e) {
     const referenceDiv = Number(e.target.parentElement.id);
-    const currentProd = props.allProd.filter((prod) =>
+    let currentProd = props.allProd.filter((prod) =>
       prod.id === referenceDiv ? true : false
     );
-    console.log(currentProd);
-    //this is an array with an obj, i just want the ojb and place it in the cart
+    currentProd = currentProd[0];
+    currentProd.quantity = quantity;
+    props.setCart((prevCart) => {
+      return [...prevCart, currentProd];
+    });
   }
 
   return (
     <div id={props.id} className="singleProduct">
-      <img src={props.image} className="prodImages" />
+      <img src={props.image} alt={props.title} className="prodImages" />
       <p className="prodTitle">{props.title}</p>
       <p className="prodPrice">{props.price} €</p>
       <div className="prodQ">
