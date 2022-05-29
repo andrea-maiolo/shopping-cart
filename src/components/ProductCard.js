@@ -19,11 +19,14 @@ const ProductCard = function (props) {
     let currentProd = props.allProd.filter((prod) =>
       prod.id === referenceDiv ? true : false
     );
+    console.log(referenceDiv);
     currentProd = currentProd[0];
+
     currentProd.quantity = quantity;
-    props.setCart((prevCart) => {
-      return [...prevCart, currentProd];
-    });
+    console.log(currentProd);
+    // props.setCart((prevCart) => {
+    //   return [...prevCart, currentProd];
+    // });
   }
 
   return (

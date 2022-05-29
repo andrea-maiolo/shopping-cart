@@ -29,6 +29,11 @@ code {
   border: 3px #025496 dotted;
 }
 
+.navBarTop {
+  display: flex;
+  align-items: center;
+}
+
 .navBarTop > a {
   margin: 1.2rem;
   text-decoration: none;
@@ -239,13 +244,15 @@ code {
 
 /* everything on cart and is button */
 .cartButton {
-  width: 60px;
-  height: 60px;
+  width: 2rem;
+  height: 2rempx;
   background-color: #025396c9;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  position: sticky;
-  left: 74rem;
-  top: 31rem;
+}
+
+.cartImg {
+  width: 1.6rem;
 }

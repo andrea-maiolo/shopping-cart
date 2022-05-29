@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Cart from "./components/Cart";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -7,7 +6,6 @@ function App() {
   return (
     <div className="homePage">
       <Header />
-      <Cart />
       <main className="storySection">
         <h2 className="secondHeader">About us</h2>
         <p className="storytelling">
