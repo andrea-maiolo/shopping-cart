@@ -243,6 +243,12 @@ code {
 }
 
 /* everything on cart and is button */
+.cartPage {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
 .cartButton {
   width: 2rem;
   height: 2rempx;
@@ -255,4 +261,33 @@ code {
 
 .cartImg {
   width: 1.6rem;
+}
+
+.productsInCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.divForProdInCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.prodInCartImg {
+  width: 5rem;
+}
+
+.prodInCartTitle {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0.2rem;
+}
+
+.prodInCartQuantity {
+  display: flex;
+  align-items: center;
 }

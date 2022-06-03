@@ -5,10 +5,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 function Shop() {
-  const [cart, setCart] = React.useState("heelo i am cart");
-
-  console.log(cart);
-
   const [products, setProducts] = useState([]);
   const [tempProducts, setTempProducts] = useState([]);
 
@@ -48,10 +44,10 @@ function Shop() {
       />
     );
   });
-
+  console.log(products);
   return (
     <div className="shopPage">
-      <Header myProp={cart} />
+      <Header />
       {loadingPage && (
         <div className="loadingPage">
           <h2 data-testid="loadT" className="loadT">

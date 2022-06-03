@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Header(props) {
-  console.log(props.myProp);
-
+function Header() {
   return (
     <header className="headerMain">
       <h1 className="shopTitle">SHOPPE</h1>
@@ -11,7 +9,7 @@ function Header(props) {
         <Link to="/">Our Story</Link>
         <Link to="/shop">Products</Link>
         <Link to="/contacts">Contact Us</Link>
-        <Link to="/cart" state={props.myProp}>
+        <Link to="/cart">
           <button className="cartButton">
             <img
               className="cartImg"

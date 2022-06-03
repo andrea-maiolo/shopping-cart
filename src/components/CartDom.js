@@ -42,10 +42,10 @@ function CartDom(props) {
   //   }
 
   return (
-    <div className={props.id}>
-      <p>{props.title}</p>
-      <img src={props.image} alt={props.title} />
-      <div className="cartQuantity">
+    <div id={props.id} className="divForProdInCart">
+      <img src={props.image} alt={props.title} className="prodInCartImg" />
+      <p className="prodInCartTitle">{props.title}</p>
+      <div className="prodInCartQuantity">
         <button onClick={handleSub}>-</button>
         <p>{cartQuantity}</p>
         <button onClick={handlePlus}>+</button>

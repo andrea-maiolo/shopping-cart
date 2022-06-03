@@ -3,41 +3,40 @@ import CartDom from "./CartDom";
 import Header from "./Header";
 import Footer from "./Footer";
 
-function Cart(props) {
-  console.log(props);
+function Cart() {
+  const [cart, setCart] = React.useState([
+    {
+      id: 9,
+      image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+      price: 64,
+      title: "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+    },
+    {
+      id: 11,
+      image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+      price: 109,
+      title:
+        "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+    },
+  ]);
 
-  function handleClick(e) {
-    let cv = document.querySelector(".cartVisible");
-    cv.classList.toggle("active");
-    e.target.classList.toggle("active");
-    let shopPage = document.querySelector(".shopPage");
-    shopPage.classList.toggle("active");
-    let homePage = document.querySelector(".homePage");
-    shopPage.classList.toggle("active");
-  }
-
-  const [cartDisplay, setCartDisplay] = React.useState();
-
-  React.useEffect(() => {
-    if (
-      props.cart === undefined ||
-      props.cart.length === 0 ||
-      props.cart.length === null
-    ) {
-      setCartDisplay("Your cart is empty");
-    } else {
-      const cartD = props.cart.map((p) => {
-        return <CartDom key={p.id} {...p} />;
-      });
-      setCartDisplay(cartD);
-    }
-    // let myA = props.cart.map((p) => console.log(p));
-  }, [props.cart]);
+  const productsInCart = cart.map((product) => {
+    return (
+      <CartDom
+        key={product.id}
+        id={product.id}
+        image={product.image}
+        price={product.price}
+        title={product.title}
+        cart={cart}
+      />
+    );
+  });
 
   return (
-    <div>
+    <div className="cartPage">
       <Header />
-      <div className="visibleCart">{cartDisplay}</div>
+      <div className="productsInCart">{productsInCart}</div>
       <Footer />
     </div>
   );
