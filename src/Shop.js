@@ -3,10 +3,12 @@ import ProductCard from "./components/ProductCard";
 import ReactLoading from "react-loading";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import CartDom from "./components/CartDom";
 
 function Shop() {
   const [products, setProducts] = useState([]);
   const [tempProducts, setTempProducts] = useState([]);
+  const [cart, setCart] = React.useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/category/electronics?sort=asce")
@@ -41,10 +43,31 @@ function Shop() {
         price={product.price}
         title={product.title}
         allProd={products}
+        cart={cart}
+        setCart={setCart}
       />
     );
   });
-  console.log(products);
+
+  const productsInCart = cart.map((product) => {
+    return (
+      <CartDom
+        key={product.id}
+        id={product.id}
+        image={product.image}
+        price={product.price}
+        title={product.title}
+        cart={cart}
+        setCart={setCart}
+      />
+    );
+  });
+
+  //this should be a toogle for visibility
+  // const handleCartDisplay = function () {
+  //   return <div>{productsInCart}</div>;
+  // };
+
   return (
     <div className="shopPage">
       <Header />
@@ -60,6 +83,16 @@ function Shop() {
         <div className="prodsDiv">
           <h2 className="shopTheLatest">Shop the latest</h2>
           {productsDom}
+          <div>
+            <button className="cartButton">
+              <img
+                className="cartImg"
+                alt="Your cart"
+                src={require(`./styles/shopping_cart.svg`).default}
+              />
+            </button>
+            {productsInCart}
+          </div>
         </div>
       )}
       <Footer />

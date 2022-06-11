@@ -9,15 +9,6 @@ function Header() {
         <Link to="/">Our Story</Link>
         <Link to="/shop">Products</Link>
         <Link to="/contacts">Contact Us</Link>
-        <Link to="/cart">
-          <button className="cartButton">
-            <img
-              className="cartImg"
-              alt="Your cart"
-              src={require(`../styles/shopping_cart.svg`).default}
-            />
-          </button>
-        </Link>
       </nav>
     </header>
   );
